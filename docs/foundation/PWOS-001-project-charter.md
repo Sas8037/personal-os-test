@@ -2,10 +2,10 @@
 id: "PWOS-001"
 title: "Project Charter"
 type: "charter"
-version: "0.13"
-status: "accepted"
+version: "0.14"
+status: "proposed"
 scope: "project"
-last_reviewed: "2026-11-02"
+last_reviewed: "2026-11-09"
 superseded_by: null
 ---
 
@@ -15,9 +15,13 @@ superseded_by: null
 **Repository:** `personal-os` (formerly `personal-web-os`)  
 **Documentation home:** [Documentation Index](../README.md)
 
-**Acceptance status:** The project owner explicitly approved PWOS-001 v0.13 on 2026-11-02, including the §11.2 documentation-verification procedure correction. v0.13 supersedes v0.12 upon integration into `main`; until that integration, main retains v0.12. The historical v0.12 approval is preserved below. PWOS-002 v0.2 remains the accepted architecture baseline. This approval does not authorize GitHub Pages publication or change D0–D4 acceptance requirements.
+**Proposal status:** **PWOS-001 v0.14 is a proposed factual-accuracy successor; owner approval is pending. It is not accepted or effective.** PWOS-001 v0.13 remains the accepted governing charter on `main`, approved 2026-11-02 including the §11.2 documentation-verification procedure. v0.13 has not been superseded by this proposal. This revision changes no accepted scope, objectives, architectural decisions, security principles or delivery requirements; separate explicit owner acceptance is required before any controlled integration.
 
-**Revision summary (2026-11-02):** Correct repository and browser/testing facts, distinguish Historical starters from Current implementation and Planned architecture, and preserve all accepted objectives, scope, ownership, security principles and D0–D4 requirements. The owner explicitly approved the manual-check replacement in §11.2 with v0.13 on 2026-11-02; the approval is recorded separately from implementation verification. Final refinements clarify interim manual documentation checks, stable document responsibilities and the separation of D0–D4 product gates from GP-00–GP-05 release milestones. No implementation or browser tests were run for this document revision.
+**Current architecture authority:** [PWOS-002 v0.3](../architecture/PWOS-002-system-architecture-foundation.md) is Accepted, approved by the owner on 2026-11-07 and integrated into main in `a0d5dd3b4c94c1eb38842b3cc9ab80b28174498a`. It supersedes historical accepted v0.2, approved 2026-10-27. v0.3 resolves the 18 factual-accuracy findings from TASK-011 without modifying ARC-01 through ARC-08. Architecture acceptance does not establish implemented subsystems, product-gate acceptance, security certification or public GitHub Pages authorization.
+
+**Proposed revision summary (2026-11-09):** Correct the current PWOS-002 authority references and distinguish this v0.14 proposal from accepted PWOS-001 v0.13 on main. Preserve the v0.12/v0.13 approvals, dated implementation evidence, all approved objectives, ownership/security boundaries, D0–D4 requirements, DEC-01–DEC-10 and §11.2 without substantive change. Review uses the live accepted documents and Git publication evidence; no application or browser tests run and no owner approval of v0.14 is recorded.
+
+**Historical v0.13 revision summary (2026-11-02):** Correct repository and browser/testing facts, distinguish Historical starters from Current implementation and Planned architecture, and preserve all accepted objectives, scope, ownership, security principles and D0–D4 requirements. The owner explicitly approved the manual-check replacement in §11.2 with v0.13 on 2026-11-02; the approval is recorded separately from implementation verification. Final refinements clarify interim manual documentation checks, stable document responsibilities and the separation of D0–D4 product gates from GP-00–GP-05 release milestones. No implementation or browser tests were run for this document revision.
 
 **Review note:** Version 0.12 was formally accepted by the project owner on 2026-10-28. That approval established project direction and early delivery gates; [PWOS-002](../architecture/PWOS-002-system-architecture-foundation.md) is the accepted detailed architecture baseline. Approval does not mean the proposed product capabilities are implemented.
 
@@ -239,7 +243,7 @@ packages/
 
 **Implementation snapshot update (2026-10-28):** The layout above describes an earlier starter still present in the supplied repository tree. New work is proceeding in `packages/desktop-shell/` independently of `apps/web`. The desktop-shell manifest, `src/index.ts` source exports for `DesktopShell` and public types, and standalone `DesktopShell.tsx` presentation component now exist. The owner confirmed `npm ls --depth=0` and `npm run typecheck:desktop-shell` succeed in Codespaces. There is **no package `exports` map, browser host integration, or working preview URL yet**; the new desktop cannot currently be viewed in a browser. This factual update does not change the accepted charter scope or D0 acceptance requirements.
 
-**Document responsibilities and snapshot limits:** PWOS-001 governs project vision, scope, objectives and D0–D4 delivery requirements; the accepted successor is v0.13, authoritative upon integration into `main`. PWOS-002 governs accepted architecture. The [File Registry](../FILE-REGISTRY.md) is the living descriptive inventory of actual repository files and status; the [Improvement Register](../IMPROVEMENTS.md) tracks current improvements, milestone progress and verification evidence. Dated implementation snapshots in this charter are historical evidence as of their stated date, not automatically maintained real-time inventories. Routine implementation progress should update the relevant living records without automatically requiring a new charter version. Material changes to approved charter requirements still require document control and explicit owner approval.
+**Document responsibilities and snapshot limits:** PWOS-001 governs project vision, scope, objectives and D0–D4 delivery requirements; the accepted governing baseline on `main` remains v0.13, while this v0.14 successor is proposed and not effective. PWOS-002 governs accepted architecture. The [File Registry](../FILE-REGISTRY.md) is the living descriptive inventory of actual repository files and status; the [Improvement Register](../IMPROVEMENTS.md) tracks current improvements, milestone progress and verification evidence. Dated implementation snapshots in this charter are historical evidence as of their stated date, not automatically maintained real-time inventories. Routine implementation progress should update the relevant living records without automatically requiring a new charter version. Material changes to approved charter requirements still require document control and explicit owner approval.
 
 **Current implementation snapshot (2026-11-02):** Tracked `apps/web/index.html` supplies #root and loads `src/main.tsx`; that React 19 entry uses createRoot/StrictMode, imports DesktopShell from `@personal-os/desktop-shell`, handles a missing root explicitly and supplies truthful offline/no-services status. Tracked `apps/web/vite.config.ts` integrates React and derives an exact trusted Codespaces hostname from validated environment values, retaining localhost defaults and rejecting unrestricted host allowances. Shell `package.json` exports compiled `dist/index.js` and `dist/index.d.ts`; its strict package tsconfig and build/typecheck scripts exist. Build the shell before the web host consumes those exports.
 
@@ -314,7 +318,7 @@ docs/
 
 `docs/requirements/`, `docs/interfaces/`, `docs/decisions/`, `docs/roadmap/` and `docs/research/` are Planned and absent. Historical drafts are not retained under `docs/archive/` in this checkout.
 
-The [documentation index](../README.md) lists the **five governing project documents**: the repository README, documentation index, documentation guide, this charter and [PWOS-002 — System Architecture Foundation](../architecture/PWOS-002-system-architecture-foundation.md). The [documentation guide](../DOCUMENTATION-GUIDE.md) defines stable identifiers, naming rules, review statuses, and cross-reference conventions. **PWOS-001 v0.13 and PWOS-002 v0.2 are accepted; v0.13 supersedes v0.12 upon integration into `main`.** The [File Registry](../FILE-REGISTRY.md), [Improvement Register](../IMPROVEMENTS.md), [Development Workflow](../DEVELOPMENT-WORKFLOW.md) and [Shared Packages Guide](../../packages/README.md) are Current non-governing supplementary documents. Historical drafts and future specifications are not automatically governing documents.
+The [documentation index](../README.md) lists the **five governing project documents**: the repository README, documentation index, documentation guide, this charter and [PWOS-002 — System Architecture Foundation](../architecture/PWOS-002-system-architecture-foundation.md). The [documentation guide](../DOCUMENTATION-GUIDE.md) defines stable identifiers, naming rules, review statuses, and cross-reference conventions. **PWOS-001 v0.13 remains accepted on main; this v0.14 revision is proposed only. PWOS-002 v0.3 is the accepted architecture, approved 2026-11-07; its historical accepted predecessor v0.2 was approved 2026-10-27.** The [File Registry](../FILE-REGISTRY.md), [Improvement Register](../IMPROVEMENTS.md), [Development Workflow](../DEVELOPMENT-WORKFLOW.md) and [Shared Packages Guide](../../packages/README.md) are Current non-governing supplementary documents. Historical drafts and future specifications are not automatically governing documents.
 
 ## 6. Development principles
 
@@ -402,7 +406,7 @@ Mitigation priorities are: a bounded first milestone, explicit capability-based 
 
 ### 11.1 Current governing set
 
-Five documents form the governing set (PWOS-001 v0.13 is accepted and succeeds v0.12 upon integration into `main`):
+Five documents form the governing set (PWOS-001 v0.13 remains accepted and authoritative on `main`; this proposed v0.14 revision does not replace it or add a governing document):
 
 1. [Repository README](../../README.md) — introduction and developer quick start.
 2. [Documentation Index](../README.md) — navigation and authoritative-document list.
@@ -426,6 +430,8 @@ Possible future documents such as requirements specifications, subsystem archite
 **Approval record:** **Approved** — PWOS-001 v0.13, by the project owner (Saul), on **2026-11-02**, following explicit approval of the revised charter including the §11.2 documentation-verification procedure correction. v0.13 is the approved successor to v0.12 and supersedes it upon integration into `main`. The original v0.12 approval and historical implementation evidence remain preserved. Approval retains the existing objectives, scope, architecture and D0–D4 requirements; it does not establish implementation acceptance, mark D0 complete, accept GP-02, authorize GP-03–GP-05 or public GitHub Pages publication, or mark IMP-015 Verified.
 
 **Historical v0.12 review conclusion (retained):** The objectives OBJ-01–OBJ-06, initial single-owner Raspberry Pi 5 scope, web-native-first approach, D0–D4 verification gates, original-kernel research separation, and approved PWOS-002 architecture are mutually consistent. No blocking scope or ownership conflict was identified. Project feasibility and D0 completion must still be verified through their stated evidence gates.
+
+**Pending owner approval — v0.14:** This factual-accuracy proposal has no owner acceptance or approval date. The accepted v0.13 record above remains binding on main; preparation, validation and publication of this proposal do not supersede it. Any acceptance and integration require a separate explicit owner decision after independent review. D0 and GP-02 acceptance, new implementation and public deployment remain unauthorized by this proposal; IMP-015 stays P1 / In progress.
 
 ## 12. High-level success criteria
 
