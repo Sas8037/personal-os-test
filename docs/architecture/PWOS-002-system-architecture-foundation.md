@@ -2,18 +2,20 @@
 id: "PWOS-002"
 title: "System Architecture Foundation"
 type: "architecture"
-version: "0.3"
-status: "accepted"
+version: "0.4"
+status: "proposed"
 scope: "system"
-last_reviewed: "2026-11-07"
+last_reviewed: "2026-11-10"
 superseded_by: null
 ---
 
 # PWOS-002 — System Architecture Foundation
 
-**Governing charter:** [PWOS-001 — Project Charter](../foundation/PWOS-001-project-charter.md) v0.13, accepted by the owner on 2026-11-02\
+**Governing charter:** [PWOS-001 — Project Charter](../foundation/PWOS-001-project-charter.md) v0.14, accepted by the owner on 2026-11-09; historical accepted v0.13 was approved 2026-11-02 and earlier v0.12 on 2026-10-28\
 **Documentation conventions:** [Documentation Guide](../DOCUMENTATION-GUIDE.md)  
-**Document status:** **Accepted v0.3 — explicitly approved by the project owner on 2026-11-07.** v0.3 is the approved successor to accepted v0.2 and supersedes it upon integration into `main`; until integration, main retains v0.2. The original v0.2 approval dated 2026-10-27 remains historical evidence in §13. Approval includes all 18 factual-accuracy corrections and preserves the eight ARC selection rows in §12 without modification. It authorizes controlled document acceptance/integration only, not new implementation work, successful runtime testing, D0–D4 acceptance, GP-02 completion or public deployment.
+**Document status:** **Proposed v0.4 — awaiting independent review and explicit owner approval; not accepted or effective.** Accepted PWOS-002 v0.3 remains the governing architecture on `main`, approved 2026-11-07 and integrated in `a0d5dd3b4c94c1eb38842b3cc9ab80b28174498a`. This proposal corrects current charter-authority references only; it changes no accepted architecture selection, implementation requirement or trust boundary. Historical v0.2/v0.3 approvals remain preserved in §13; neither approves v0.4.
+
+**Proposed revision summary (2026-11-10):** Address FINAL-AUD-001 by identifying accepted PWOS-001 v0.14 as the current charter while retaining v0.13 as the November 7 architecture-review baseline. Preserve all eight complete ARC rows, technical content, verification obligations, historical evidence and publication restrictions. This is a documentation proposal only; no application/browser tests, builds or installations run. Owner approval of v0.4 remains pending.
 
 **Revision summary (2026-11-07):** Reconcile TASK-011 findings PWOS2-AUD-001–PWOS2-AUD-018 using the live tracked checkout and accepted PWOS-001 v0.13. Correct removed API/shell and package-existence claims; record the implemented thin React/Vite host and public shell exports; distinguish Historical reports, Current source and Planned responsibilities; clarify milestone, publication and living-record boundaries. Prior owner-reported browser acceptance and Codex build checks remain attributed evidence, not rerun tests. Historical v0.2 approval and review dates are preserved in §13. The owner explicitly approved v0.3 on 2026-11-07; no application or browser tests ran for this accuracy revision or its acceptance.
 
@@ -329,7 +331,7 @@ The shell manifest exports compiled `dist/index.js` and `dist/index.d.ts`; `src/
 
 **Testing and static-build readiness:** The committed root lockfile v3 records shell/web dependencies and exact web development dependency `@playwright/test` `1.64.1`; `test:e2e` is defined. Playwright output is ignored. Chromium/OS setup and a headless launch are not confirmed complete; Playwright configuration and smoke sources, accessibility integration and testing CI are absent. No automated browser success is claimed. Vite has no explicit `/personal-os/` base or application routing implementation; production-subpath assets, supported navigation/refresh and production-preview behavior still require verification. GP-02 remains In progress, acceptance pending.
 
-**Living records and authority:** Accepted PWOS-001 v0.13 governs vision, scope, objectives and D0–D4 product requirements; accepted PWOS-002 v0.3 is the approved architecture successor, effective upon integration into main; v0.2 remains the historical predecessor after that integration. The [File Registry](../FILE-REGISTRY.md) is the living, non-governing descriptive inventory; the [Improvement Register](../IMPROVEMENTS.md) tracks improvements, milestone progress and verification evidence. Check the actual checkout when refreshing dated records. Snapshots here are evidence as of their dates, not automatically maintained inventories; routine progress belongs in living records without automatically requiring a new architecture version. Material architectural changes still require explicit change control and owner approval.
+**Living records and authority:** Accepted PWOS-001 v0.14, owner-approved 2026-11-09, governs vision, scope, objectives and D0–D4 product requirements; historical accepted v0.13 was approved 2026-11-02 and earlier v0.12 on 2026-10-28. Accepted PWOS-002 v0.3 remains authoritative on main; historical v0.2 is its predecessor, and this v0.4 proposal is not effective. The [File Registry](../FILE-REGISTRY.md) is the living, non-governing descriptive inventory; the [Improvement Register](../IMPROVEMENTS.md) tracks improvements, milestone progress and verification evidence. Check the actual checkout when refreshing dated records. Snapshots here are evidence as of their dates, not automatically maintained inventories; routine progress belongs in living records without automatically requiring a new architecture version. Material architectural changes still require explicit change control and owner approval.
 
 **Milestone distinction:** D0–D4 are product capability gates; GP-00–GP-05 are separate static-demo release milestones. GP-01 or GP-02 completion, or a published demo, cannot substitute for actual D0 panel open/close behavior and `/health` and `/api/system` responses. D0 is not formally accepted. GP-03 safety/explicit publication approval and GP-04/GP-05 deployment/live verification remain pending; no public deployment is authorized by this architecture acceptance.
 
@@ -386,7 +388,7 @@ Key risks remain premature complexity, privilege inheritance across frontend bou
 
 ## 13. Governance, references and next work
 
-Accepted PWOS-002 v0.3 elaborates accepted [PWOS-001 v0.13](../foundation/PWOS-001-project-charter.md), approved on 2026-11-02. The owner explicitly approved v0.3 on 2026-11-07 as the successor to accepted v0.2, effective upon integration into main. Any future scope conflict must be reconciled explicitly. Architecture acceptance does not silently supersede the charter or grant product/release acceptance.
+The current governing charter is accepted [PWOS-001 v0.14](../foundation/PWOS-001-project-charter.md), owner-approved 2026-11-09 and integrated in `ae91e1ad65ffbb176507447926cbf0045f483942`. PWOS-001 v0.13, approved 2026-11-02, was the accepted charter when PWOS-002 v0.3 was reviewed and approved on 2026-11-07; earlier charter v0.12 was approved 2026-10-28. PWOS-002 v0.3 remains the accepted architecture on main, succeeding historical v0.2; this v0.4 successor is proposed only, awaiting independent review and explicit owner approval. Any future scope conflict must be reconciled explicitly. Architecture acceptance does not silently supersede the charter or grant product/release acceptance.
 
 **Historical approval record — applies to v0.2:**
 
