@@ -2,10 +2,10 @@
 id: "PWOS-001"
 title: "Project Charter"
 type: "charter"
-version: "0.14"
-status: "accepted"
+version: "0.15"
+status: "proposed"
 scope: "project"
-last_reviewed: "2026-11-09"
+last_reviewed: "2026-11-11"
 superseded_by: null
 ---
 
@@ -15,9 +15,15 @@ superseded_by: null
 **Repository:** `personal-os` (formerly `personal-web-os`)  
 **Documentation home:** [Documentation Index](../README.md)
 
+**Proposal status (2026-11-11):** **PWOS-001 v0.15 is a proposed factual-accuracy successor, not accepted or effective.** Accepted v0.14 remains authoritative on main, approved 2026-11-09; it has not been superseded by this proposal. Independent review and separate explicit version-specific owner approval are required before controlled acceptance/integration. No v0.15 owner approval has occurred.
+
+**Proposed revision summary (2026-11-11):** Address TASK-015.6.15’s two current-architecture-authority discrepancies using the stable PWOS-002 identity and a separately dated baseline. Preserve all approved requirements, scope, governance, trust boundaries, historical approvals and the November 9 revision summary verbatim. Dated approval/review records below describe their original versions; they do not approve this proposal. No application/browser tests, builds or installations run; IMP-015 remains P1 / In progress and the repeat audit remains pending.
+
 **Acceptance status:** **PWOS-001 v0.14 was explicitly approved by the project owner on 2026-11-09 as the accepted successor to v0.13.** It supersedes v0.13 upon controlled integration into `main`; until integration, v0.13 remains authoritative there. Approval covers the factual-accuracy corrections and updated PWOS-002 v0.3 references. All existing objectives, DEC-01–DEC-10, D0–D4 requirements, governance procedures, architectural decisions and historical approval records remain unchanged. Approval does not authorize new implementation work, product-gate acceptance, GP-02 completion, public deployment or closure of IMP-015.
 
-**Current architecture authority:** [PWOS-002 v0.3](../architecture/PWOS-002-system-architecture-foundation.md) is Accepted, approved by the owner on 2026-11-07 and integrated into main in `a0d5dd3b4c94c1eb38842b3cc9ab80b28174498a`. It supersedes historical accepted v0.2, approved 2026-10-27. v0.3 resolves the 18 factual-accuracy findings from TASK-011 without modifying ARC-01 through ARC-08. Architecture acceptance does not establish implemented subsystems, product-gate acceptance, security certification or public GitHub Pages authorization.
+**Current architecture authority:** [PWOS-002 — System Architecture Foundation](../architecture/PWOS-002-system-architecture-foundation.md) is the stable governing architecture document; its accepted revision is established through its own metadata, recorded owner approval and controlled integration. The charter’s dated review baseline does not freeze that document at an earlier revision. Architecture acceptance does not establish implemented subsystems, product-gate acceptance, security certification or public GitHub Pages authorization.
+
+**Architecture baseline inspected on 2026-11-11:** PWOS-002 v0.4 is Accepted, owner-approved 2026-11-10 and integrated in `f808a9c3858d254244ef9493b4f6a56667a9bb09`. Historical accepted v0.3 was approved 2026-11-07 and integrated in `a0d5dd3b4c94c1eb38842b3cc9ab80b28174498a`; it resolved the 18 TASK-011 factual-accuracy findings without changing ARC-01–ARC-08. Earlier v0.2 was approved 2026-10-27. v0.4 corrects charter-authority references without changing those selections. This is dated inspection evidence, not a permanent assertion about future accepted revisions. The November 9 charter approval records retain their original v0.3 context.
 
 **Revision summary (2026-11-09):** Correct the current PWOS-002 authority references and identify accepted v0.14 as the successor to historical accepted PWOS-001 v0.13 upon integration into main. Preserve the v0.12/v0.13 approvals, dated implementation evidence, all approved objectives, ownership/security boundaries, D0–D4 requirements, DEC-01–DEC-10 and §11.2 without substantive change. Review uses the live accepted documents and Git publication evidence; no application or browser tests run. The owner explicitly approved v0.14 on 2026-11-09; the approval is recorded separately from implementation verification.
 
@@ -318,7 +324,7 @@ docs/
 
 `docs/requirements/`, `docs/interfaces/`, `docs/decisions/`, `docs/roadmap/` and `docs/research/` are Planned and absent. Historical drafts are not retained under `docs/archive/` in this checkout.
 
-The [documentation index](../README.md) lists the **five governing project documents**: the repository README, documentation index, documentation guide, this charter and [PWOS-002 — System Architecture Foundation](../architecture/PWOS-002-system-architecture-foundation.md). The [documentation guide](../DOCUMENTATION-GUIDE.md) defines stable identifiers, naming rules, review statuses, and cross-reference conventions. **PWOS-001 v0.14 is accepted, approved 2026-11-09, and succeeds v0.13 upon integration into main. PWOS-002 v0.3 is the accepted architecture, approved 2026-11-07; its historical accepted predecessor v0.2 was approved 2026-10-27.** The [File Registry](../FILE-REGISTRY.md), [Improvement Register](../IMPROVEMENTS.md), [Development Workflow](../DEVELOPMENT-WORKFLOW.md) and [Shared Packages Guide](../../packages/README.md) are Current non-governing supplementary documents. Historical drafts and future specifications are not automatically governing documents.
+The [documentation index](../README.md) lists the **five governing project documents**: the repository README, documentation index, documentation guide, this charter and [PWOS-002 — System Architecture Foundation](../architecture/PWOS-002-system-architecture-foundation.md). The [documentation guide](../DOCUMENTATION-GUIDE.md) defines stable identifiers, naming rules, review statuses, and cross-reference conventions. **PWOS-001 v0.14 remains the accepted charter on main, approved 2026-11-09; this v0.15 revision is proposed only. PWOS-002 is the stable governing architecture identity; consult its accepted metadata and approval record for current authority, and the dated architecture baseline above for this review’s version context.** The [File Registry](../FILE-REGISTRY.md), [Improvement Register](../IMPROVEMENTS.md), [Development Workflow](../DEVELOPMENT-WORKFLOW.md) and [Shared Packages Guide](../../packages/README.md) are Current non-governing supplementary documents. Historical drafts and future specifications are not automatically governing documents.
 
 ## 6. Development principles
 
